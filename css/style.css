@@ -3,7 +3,7 @@
   padding: 0; }
 
 .container {
-  width: 80%;
+  width: 80vw;
   margin: 0 auto; }
 
 .toDoList {
@@ -21,14 +21,19 @@
     background: #EFE9F4;
     border-bottom: 2px solid black;
     outline: none; }
+  .toDoList-btnContainer {
+    display: flex;
+    justify-content: flex-end; }
   .toDoList-btn {
-    margin-left: 5%;
+    margin-left: 3%;
+    margin-top: 10%;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background: #fff;
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
-    outline: none; }
+    outline: none;
+    text-align: center; }
   .toDoList-containerTitle {
     font-size: 16px;
     margin-top: 10%;
@@ -43,8 +48,7 @@
   .toDoList-check {
     margin-right: 10%;
     outline: none; }
-
-.line {
-  text-decoration: line-through; }
+    .toDoList-check:checked + label {
+      text-decoration: line-through; }
 
 /*# sourceMappingURL=style.css.map */

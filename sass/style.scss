@@ -4,7 +4,7 @@
 }
 
 .container {
-    width: 80%;
+    width: 80vw;
     margin: 0 auto;
 }
 
@@ -27,14 +27,20 @@
         border-bottom: 2px solid black;
         outline: none;
     }
+    &-btnContainer {
+        display: flex;
+        justify-content: flex-end;
+    }
     &-btn {
-        margin-left: 5%;
+        margin-left: 3%;
+        margin-top: 10%;
         width: 30px;
         height: 30px;
         border-radius: 50%;
         background: #fff;
         box-shadow: 1px 3px 3px rgba($color: #000000, $alpha: 0.2);
         outline: none;
+        text-align: center;
     }
     &-containerTitle {
         @extend .toDoList-title;
@@ -55,9 +61,8 @@
     &-check {
         margin-right: 10%;
         outline: none;
+        &:checked+label {
+            text-decoration: line-through;
+        }
     }
-}
-
-.line {
-    text-decoration: line-through
 }
