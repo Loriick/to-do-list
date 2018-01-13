@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="toDoList">
+    <div class="container">
+        <h3 class="toDoList-title">To do list</h3>
+        <input type="text" class="toDoList-input" placeholder="Add a to-do">
+        <button class="toDoList-btn">+</button>
+        <div class="toDoList-container">
+            <h4 class="toDoList-containerTitle">To do</h4>
+            <ul class="toDoList-listAdd">
+                <li class="toDoList-listItem"><input type="checkbox" class="toDoList-check">faire le menage</input>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var input = document.querySelector('.toDoList-input');
+        var list = document.querySelector('.toDoList-listAdd');
+        var btn = document.querySelector('.toDoList-btn');
+        var checks = document.querySelector('.toDoList-check');
+        var listItem = document.querySelectorAll('.toDoList-listItem');
+        var removeList = document.querySelector('.toDoList-listRemove');
+
+
+
+        var addToDo = function() {
+            var newListItem = document.createElement('li');
+            var checkbox = document.createElement('input');
+            checkbox.setAttribute('type', 'checkbox');
+            checkbox.classList.add('toDoList-check');
+            newListItem.appendChild(checkbox);
+            var valueList = document.createTextNode(input.value);
+            newListItem.appendChild(valueList);
+            newListItem.classList.add('toDoList-listItem');
+            list.appendChild(newListItem);
+        }
+
+        var boxline = function() {
+            checks.addEventListener('click', function() {
+                for (let i = 0; i < listItem.length; i++) {
+                    if (checks.checked) {
+                        listItem[i].classList.toggle('line');
+                    };
+                };
+            });
+        };
+        boxline();
+
+        window.addEventListener('keydown', function(event) {
+            if (event.keyCode === 13) {
+                addToDo();
+            };
+            boxline();
+        });
+
+        input.addEventListener('change', function() {
+            if (input.value !== ' ') {
+                input.value = '';
+            };
+        });
+        btn.addEventListener('click', function() {
+            addToDo();
+            boxline();
+        });
+    </script>
+</body>
+
+</html>
