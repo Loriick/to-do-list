@@ -35,46 +35,44 @@
         var listTab = [];
 
 
-
+        //fonction pour créer les élément de la todolist
         var addToDo = function() {
-            if (input.value) {
-                var newListItem = document.createElement('li');
-                var checkbox = document.createElement('input');
-                var label = document.createElement('label');
-                checkbox.setAttribute('type', 'checkbox');
-                checkbox.classList.add('toDoList-check');
-                newListItem.appendChild(checkbox);
-                newListItem.appendChild(label);
-                var valueList = document.createTextNode(input.value);
-                label.appendChild(valueList);
-                newListItem.classList.add('toDoList-listItem');
-                list.appendChild(newListItem);
-                input.value = "";
-            }
-        }
-
-        deleteButton.addEventListener('click', () => {
-            var listDel = document.querySelectorAll('.toDoList-listItem')
-            for (let i = 0; i < listDel.length; i++) {
-                const listDelElem = listDel[i];
-
-                if (listDelElem.querySelector('.toDoList-check')) {
-                    listDelElem.remove();
+                if (input.value) {
+                    var newListItem = document.createElement('li');
+                    var checkbox = document.createElement('input');
+                    var label = document.createElement('label');
+                    checkbox.setAttribute('type', 'checkbox');
+                    checkbox.classList.add('toDoList-check');
+                    newListItem.appendChild(checkbox);
+                    newListItem.appendChild(label);
+                    var valueList = document.createTextNode(input.value);
+                    label.appendChild(valueList);
+                    newListItem.classList.add('toDoList-listItem');
+                    list.appendChild(newListItem);
+                    input.value = "";
                 }
-
-            };
-        })
-
+            }
+            //ajouter les éléments créer a la liste
+        btn.addEventListener('click', function() {
+            addToDo();
+        });
+        //ajouter les éléments créer a la liste avec la touche entrée
         window.addEventListener('keydown', function(event) {
             if (event.keyCode === 13) {
                 addToDo();
             };
         });
+        //supprimer une élément selectionner avec le input de type checkbox
+        deleteButton.addEventListener('click', () => {
+            var listDel = document.querySelectorAll('.toDoList-listItem')
+            for (let i = 0; i < listDel.length; i++) {
+                const listDelElem = listDel[i];
 
-
-        btn.addEventListener('click', function() {
-            addToDo();
-        });
+                if (listDelElem.querySelector('.toDoList-check').checked) {
+                    listDelElem.remove();
+                }
+            };
+        })
     </script>
 </body>
 
