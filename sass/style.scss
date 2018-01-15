@@ -37,10 +37,10 @@
 .toDoList {
     background: #EFE9F4;
     @include tablet {
-        background: #fff;
+        background: #696773;
     }
     @include desktop {
-        background: #fff;
+        background: #696773;
     }
     &-title {
         font: {

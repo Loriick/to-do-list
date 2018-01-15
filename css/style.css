@@ -24,10 +24,10 @@
   background: #EFE9F4; }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .toDoList {
-      background: #fff; } }
+      background: #696773; } }
   @media screen and (min-width: 64em) {
     .toDoList {
-      background: #fff; } }
+      background: #696773; } }
   .toDoList-title, .toDoList-containerTitle {
     font-family: helvetica, arial, sans-serif;
     font-size: 18px;
