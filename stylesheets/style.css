@@ -1,0 +1,75 @@
+/* line 1, ../sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/style.scss */
+.container {
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* line 13, ../sass/style.scss */
+.toDoList {
+  background: #EFE9F4;
+}
+/* line 16, ../sass/style.scss */
+.toDoList-title, .toDoList-containerTitle {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: grey;
+}
+/* line 24, ../sass/style.scss */
+.toDoList-input {
+  margin-top: 20%;
+  border: none;
+  width: 80%;
+  background: #EFE9F4;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+/* line 32, ../sass/style.scss */
+.toDoList-btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+/* line 36, ../sass/style.scss */
+.toDoList-btn {
+  margin-left: 3%;
+  margin-top: 10%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+  outline: none;
+  text-align: center;
+}
+/* line 47, ../sass/style.scss */
+.toDoList-containerTitle {
+  font-size: 16px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+/* line 53, ../sass/style.scss */
+.toDoList-listItem {
+  list-style: none;
+  font-size: 14px;
+  font-family: helvetica, arial, sans-serif;
+  color: #000;
+  margin-bottom: 2%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+/* line 63, ../sass/style.scss */
+.toDoList-check {
+  margin-right: 10%;
+  outline: none;
+}
+/* line 66, ../sass/style.scss */
+.toDoList-check:checked + label {
+  text-decoration: line-through;
+}

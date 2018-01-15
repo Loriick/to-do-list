@@ -1,16 +1,47 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin tablet {
+    @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 64em) {
+        @content;
+    }
 }
 
 .container {
     width: 80vw;
+    height: 70vh;
     margin: 0 auto;
+    @include tablet {
+        width: 50vw;
+        background: #EFE9F4;
+        margin: 20% auto;
+        padding: 3%;
+    }
+    @include desktop {
+        width: 25vw;
+        background: #EFE9F4;
+        margin: 7% auto;
+        padding: 3%;
+    }
 }
 
 .toDoList {
     background: #EFE9F4;
-    width: 100%;
+    @include tablet {
+        background: #fff;
+    }
+    @include desktop {
+        background: #fff;
+    }
     &-title {
         font: {
             family: helvetica, arial, sans-serif;

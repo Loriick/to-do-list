@@ -1,14 +1,33 @@
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 .container {
   width: 80vw;
+  height: 70vh;
   margin: 0 auto; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .container {
+      width: 50vw;
+      background: #EFE9F4;
+      margin: 20% auto;
+      padding: 3%; } }
+  @media screen and (min-width: 64em) {
+    .container {
+      width: 25vw;
+      background: #EFE9F4;
+      margin: 7% auto;
+      padding: 3%; } }
 
 .toDoList {
-  background: #EFE9F4;
-  width: 100%; }
+  background: #EFE9F4; }
+  @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .toDoList {
+      background: #fff; } }
+  @media screen and (min-width: 64em) {
+    .toDoList {
+      background: #fff; } }
   .toDoList-title, .toDoList-containerTitle {
     font-family: helvetica, arial, sans-serif;
     font-size: 18px;
