@@ -10,24 +10,24 @@
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .container {
       width: 50vw;
-      background: #EFE9F4;
+      background: #CFCFCF;
       margin: 20% auto;
       padding: 3%; } }
   @media screen and (min-width: 64em) {
     .container {
       width: 25vw;
-      background: #EFE9F4;
+      background: #CFCFCF;
       margin: 7% auto;
       padding: 3%; } }
 
 .toDoList {
-  background: #EFE9F4; }
+  background: #CFCFCF; }
   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     .toDoList {
-      background: #696773; } }
+      background: #efefef; } }
   @media screen and (min-width: 64em) {
     .toDoList {
-      background: #696773; } }
+      background: #efefef; } }
   .toDoList-title, .toDoList-containerTitle {
     font-family: helvetica, arial, sans-serif;
     font-size: 18px;
@@ -37,7 +37,7 @@
     margin-top: 20%;
     border: none;
     width: 80%;
-    background: #EFE9F4;
+    background: #CFCFCF;
     border-bottom: 2px solid black;
     outline: none; }
   .toDoList-btnContainer {

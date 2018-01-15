@@ -22,25 +22,25 @@
     margin: 0 auto;
     @include tablet {
         width: 50vw;
-        background: #EFE9F4;
+        background: #CFCFCF;
         margin: 20% auto;
         padding: 3%;
     }
     @include desktop {
         width: 25vw;
-        background: #EFE9F4;
+        background: #CFCFCF;
         margin: 7% auto;
         padding: 3%;
     }
 }
 
 .toDoList {
-    background: #EFE9F4;
+    background: #CFCFCF;
     @include tablet {
-        background: #696773;
+        background: #efefef;
     }
     @include desktop {
-        background: #696773;
+        background: #efefef;
     }
     &-title {
         font: {
@@ -54,7 +54,7 @@
         margin-top: 20%;
         border: none;
         width: 80%;
-        background: #EFE9F4;
+        background: #CFCFCF;
         border-bottom: 2px solid black;
         outline: none;
     }
